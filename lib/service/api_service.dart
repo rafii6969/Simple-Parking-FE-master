@@ -26,7 +26,7 @@ abstract class ApiServices {
           );
         }
       } else {
-        throw Exception('404 not found');
+        throw Exception('status code salah');
       }
     } catch (e) {
       throw Exception(e.toString());

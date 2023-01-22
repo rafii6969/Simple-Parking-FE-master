@@ -11,8 +11,8 @@ import 'package:simple_parking_app/view/auth/signup_page.dart';
 class LoginPage extends StatelessWidget {
   static final String TAG = '/LoginPage';
 
-  final _tfEmail = TextEditingController(text: "rafiizf554@gmail.com");
-  final _tfPassword = TextEditingController(text: "qwerty");
+  final _tfEmail = TextEditingController();
+  final _tfPassword = TextEditingController();
 
   final _isPasswordVisible = true.obs;
   final _isLoading = false.obs;
@@ -221,7 +221,7 @@ class LoginPage extends StatelessWidget {
           loginFailed();
         } else {
           var userID = data.result!.id!;
-          await DataPref.setUserId(userID);
+          await DataPref.setUserId(userID.toString());
           _isLoading.value = !_isLoading.value;
           Get.offAndToNamed('${NavBar.TAG}/$userID');
         }

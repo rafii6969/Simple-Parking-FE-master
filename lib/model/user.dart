@@ -19,7 +19,7 @@ class LoginResponse {
 }
 
 class User {
-  String? id;
+  int? id;
   String? nama;
   String? noTelp;
   String? email;
