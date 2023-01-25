@@ -81,7 +81,7 @@ abstract class ApiServices {
     required String password,
   }) async {
     try {
-      final response = await http.put(
+      final response = await http.post(
         Uri.parse(Api.editProfile),
         body: {
           'id': userID,
@@ -107,7 +107,7 @@ abstract class ApiServices {
     required String nominal,
   }) async {
     try {
-      final response = await http.put(
+      final response = await http.post(
         Uri.parse(Api.topup),
         body: {'id': userID, 'saldo': nominal},
       );
@@ -115,7 +115,7 @@ abstract class ApiServices {
         var data = json.decode(response.body);
         return Response.fromJson(data);
       } else {
-        throw Exception('404 not found');
+        throw Exception('404 not found mmm');
       }
     } catch (e) {
       throw Exception(e.toString());
@@ -223,7 +223,7 @@ abstract class ApiServices {
     required String cost,
   }) async {
     try {
-      final response = await http.put(
+      final response = await http.post(
         Uri.parse(Api.payParking),
         body: {'id': parkingID, 'id_user': userID, 'cost': cost},
       );

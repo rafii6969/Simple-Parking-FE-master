@@ -91,7 +91,7 @@ class CardParkingActivity extends StatelessWidget {
                         Icon(Icons.calendar_month_outlined),
                         SizedBox(width: 8),
                         Text(
-                          Formater.dateTime(dateTime),
+                          dateTime,
                           style: TextStyle(
                             color: Colors.white,
                           ),
@@ -105,7 +105,7 @@ class CardParkingActivity extends StatelessWidget {
                         Icon(Icons.timelapse_outlined),
                         SizedBox(width: 8),
                         Text(
-                          Formater.timeDifference(dateTime),
+                          dateTime,
                           // "5 Jam 10 Menit",
                           style: TextStyle(
                             color: Colors.white,

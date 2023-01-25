@@ -221,7 +221,7 @@ class LoginPage extends StatelessWidget {
           loginFailed();
         } else {
           var userID = data.result!.id!;
-          await DataPref.setUserId(userID.toString());
+          await DataPref.setUserId(userID);
           _isLoading.value = !_isLoading.value;
           Get.offAndToNamed('${NavBar.TAG}/$userID');
         }
