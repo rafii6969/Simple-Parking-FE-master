@@ -9,8 +9,8 @@ class Vehicle {
     this.jenis,
   });
 
-  String? id;
-  String? idUser;
+  int? id;
+  int? idUser;
   String? merek;
   String? model;
   String? warna;

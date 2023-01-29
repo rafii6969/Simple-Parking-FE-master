@@ -64,7 +64,7 @@ abstract class ApiServices {
       );
       if (response.statusCode == 200) {
         var data = json.decode(response.body);
-        return User.fromJson(data);
+        return User.fromJson(data['result']);
       } else {
         throw Exception('404 not found');
       }

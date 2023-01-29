@@ -192,7 +192,7 @@ class ParkingPage extends StatelessWidget {
                   );
                 },
                 onChanged: (val) {
-                  _selectedItemID.value = val?.id;
+                  _selectedItemID.value = val?.id.toString();
                   _selectedItemModel.value = val?.model;
                 },
               ),

@@ -1,5 +1,5 @@
 class Api {
-  static var baseUrl = "http://192.168.1.5:5000/";
+  static var baseUrl = "http://192.168.1.2:5000/";
 
   static var login = "${baseUrl}login";
   static var signup = "${baseUrl}register";

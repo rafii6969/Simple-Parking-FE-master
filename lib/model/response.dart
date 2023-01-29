@@ -3,7 +3,11 @@ class Response<T> {
   String message;
   T? result;
 
-  Response({required this.error, required this.message, this.result});
+  Response({
+    required this.error, 
+    required this.message, 
+    this.result
+  });
 
   factory Response.fromJson(Map<String, dynamic> json) {
     return Response(
